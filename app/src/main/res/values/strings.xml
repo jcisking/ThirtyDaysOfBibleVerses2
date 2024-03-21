@@ -60,5 +60,5 @@
     <string name="day_29_passage">In the beginning was the Word, and the Word was with God, and the Word was God.</string>
     <string name="day_30_verse">Isaiah 53:4 (KJV)</string>
     <string name="day_30_passage">Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted.</string>
-    <string name="day">Day %d</string>
+    <string name="day">Day %s</string>
 </resources>
