@@ -5,9 +5,14 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,14 +27,36 @@ import com.example.thirtydaysofbibleverses2.model.BibleVerseItem
 import com.example.thirtydaysofbibleverses2.model.BibleVerseRepository
 import com.example.thirtydaysofbibleverses2.ui.theme.ThirtyDaysOfBibleVerses2Theme
 
+
+
+
+
+@Composable
+fun BibleVerseList(
+    modifier: Modifier = Modifier
+) {
+    LazyColumn(
+        modifier = modifier
+    ) {
+        this.items(items = BibleVerseRepository.bibleVerseItems) {BibleVerseItem ->
+            BibleVerseListItem(bibleVerse = BibleVerseItem)
+        }
+    }
+}
+
+
 @Composable
 fun BibleVerseListItem(
     bibleVerse: BibleVerseItem,
     modifier: Modifier = Modifier
 ) {
-    Card(modifier = modifier) {
+    Card(
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        modifier = modifier.fillMaxWidth()
+    ) {
         Column(
             modifier = Modifier
+                .padding(0.dp)
         ) {
             Text(text = stringResource(id = bibleVerse.dayRes, "1"))
             Image(

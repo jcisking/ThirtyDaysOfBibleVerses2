@@ -174,12 +174,6 @@ object BibleVerseRepository {
         ),
         BibleVerseItem(
             dayRes = R.string.day,
-            imageRes = R.drawable.day28,
-            verseRes = R.string.day_28_verse,
-            passageRes = R.string.day_28_passage
-        ),
-        BibleVerseItem(
-            dayRes = R.string.day,
             imageRes = R.drawable.day29,
             verseRes = R.string.day_29_verse,
             passageRes = R.string.day_29_passage
